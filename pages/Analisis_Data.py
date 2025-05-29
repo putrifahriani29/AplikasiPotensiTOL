@@ -222,7 +222,9 @@ if st.button("📂 Analisis Dataset"):
             numerical_cols = X.select_dtypes(include=np.number).columns.tolist()
             categorical_cols = X.select_dtypes(include=['object', 'category']).columns.tolist()
 
-            ohe = OneHotEncoder(sparse=False, handle_unknown='ignore')
+           
+            ohe = OneHotEncoder(sparse_output=False, handle_unknown='ignore')
+
             X_cat_encoded = ohe.fit_transform(X[categorical_cols])
             encoded_cat_cols = ohe.get_feature_names_out(categorical_cols)
             X_cat_df = pd.DataFrame(X_cat_encoded, columns=encoded_cat_cols, index=X.index)
