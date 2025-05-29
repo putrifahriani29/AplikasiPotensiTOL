@@ -79,7 +79,7 @@ def generate_style(param_name, value, bg_color="#FFF5C2", text_color="blue"):
 # --------------------- Load Model ---------------------
 @st.cache_resource
 def load_model():
-    with open("model_rf_potensiTOL.pkl", "rb") as f:
+    with open("model_potensiTOL.pkl", "rb") as f:
         return pickle.load(f)
 
 model = load_model()
@@ -90,7 +90,7 @@ penguasaan = st.selectbox("**PENGUASAAN TANAH**", ["Penggarap", "Pemilik", "Faso
 kepemilikan = st.selectbox("**KEPEMILIKAN TANAH**", ["Terdaftar", "Belum Terdaftar", "Terdaftar (HGU Baru)", "Tidak Terdaftar", "Terdaftar (tumpang tindih)"])
 penggunaan = st.selectbox("**PENGGUNAAN TANAH**", ["Tegalan", "Rumah Tinggal", "Kebun Campuran", "Mushola", "Masjid", "PAUD", "Madrasah", "Pangkalan Ojek", "Kebun", "Lainnya"])
 pemanfaatan = st.selectbox("**PEMANFAATAN TANAH**", ["Tanaman semusim", "Tempat tinggal", "Produksi pertanian", "Sarana Ibadah", "Sarana Pendidikan", "Olahraga", "Usaha", "Tanaman tahunan"])
-luas = st.number_input("**LUAS TANAH (m²)** _maximum 50 ha_", min_value=1, max_value=500000, value=10000, step=1)
+luas = st.number_input("**LUAS TANAH (m²)** _maximum 50 ha_", min_value=1, max_value=500000, value=1000, step=1)
 
 # --------------------- Tombol Prediksi ---------------------
 col1, col2, col3 = st.columns([1, 1, 1])
