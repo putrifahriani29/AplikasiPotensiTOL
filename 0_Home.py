@@ -111,4 +111,4 @@ tampilkan_tanggal()
 display_data_info()
 
 # Info message with a link to the dataset
-st.info('Dokumentasi project ini dapat dilihat di GitHub: [PotensiTOL](https://github.com/putrifahriani29/PotensiTOL)')
+st.info('Dokumentasi project ini dapat dilihat di GitHub: [AplikasiPotensiTOL](https://github.com/putrifahriani29/AplikasiPotensiTOL)')
